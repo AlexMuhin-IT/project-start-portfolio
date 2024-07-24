@@ -17,6 +17,8 @@ function App() {
             <Projects/>
             <Contact/>
             <Footer/>
+
+        <h1>пробный текст</h1>
         </div>
     );
 }
