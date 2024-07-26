@@ -69,7 +69,7 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   /* min-height: 50vh; */
 `
-const SectionSubtitle = styled.span`
+export const SectionSubtitle = styled.p`
 display: block;
 text-align: center;
 padding-bottom: 125px;

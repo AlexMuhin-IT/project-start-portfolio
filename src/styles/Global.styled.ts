@@ -37,4 +37,12 @@ button {
 section {
   padding-bottom: 200px;
 }
+
+h1{
+  font-size: calc( (100vw - 480px)/(1580 - 480) * (58 - 16) + 16px);
+}
+h2{
+  font-size: calc( (100vw - 480px)/(1580 - 480) * (48 - 16) + 16px);
+}
+
 `

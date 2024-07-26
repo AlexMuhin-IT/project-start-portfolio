@@ -51,15 +51,16 @@ const StyledFooter = styled.footer`
   justify-content: space-between;
   position: relative;
   height: 176px;
+  margin-bottom: 40px;
 
-  &::after {
-    content: '';
-    top: 100px;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #666666;
-  }
+  //&::after {
+  //  content: '';
+  //  top: 100px;
+  //  position: absolute;
+  //  width: 100%;
+  //  height: 2px;
+  //  background-color: #666666;
+  //}
 `
 const SocialList = styled.ul`
   display: flex;
@@ -76,7 +77,8 @@ const FooterTop = styled.div`
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  
+  border-bottom: 2px solid #666666;
+  padding-bottom: 55px;
   a {
     flex-grow: 3;
     
@@ -86,6 +88,7 @@ const FooterTop = styled.div`
   }
 `
 const FooterBottom = styled.div`
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 

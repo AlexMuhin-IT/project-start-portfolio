@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { SectionTitle } from '../../../components/SectionTitle';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Project } from './project/Project';
-import projectImg1 from './../../../../src/assets/images/projectImg1.png'
-import projectImg2 from './../../../../src/assets/images/projectImg2.png'
-import projectImg3 from './../../../../src/assets/images/projectImg3.png'
-import projectImg4 from './../../../../src/assets/images/projectImg4.png'
-import projectImg5 from './../../../../src/assets/images/projectImg5.png'
-import projectImg6 from './../../../../src/assets/images/projectImg6.png'
+import projectImg1 from './../../../../src/assets/images/projectImg1.webp'
+import projectImg2 from './../../../../src/assets/images/projectImg2.webp'
+import projectImg3 from './../../../../src/assets/images/projectImg3.webp'
+import projectImg4 from './../../../../src/assets/images/projectImg4.webp'
+import projectImg5 from './../../../../src/assets/images/projectImg5.webp'
+import projectImg6 from './../../../../src/assets/images/projectImg6.webp'
 import { Container } from '../../../components/Container';
 
 export const Projects = () => {

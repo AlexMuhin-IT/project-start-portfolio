@@ -5,14 +5,14 @@ import {Contact} from './layout/sections/contacts/Contacts';
 import {Main} from './layout/sections/main/Main';
 import {Projects} from './layout/sections/projects/Projects';
 import {Skills} from './layout/sections/skills/skill/Skills';
-import {Group} from "./layout/sections/group/Group";
+import {Services} from "./layout/sections/group/Services";
 
 function App() {
     return (
         <div className="App">
             <Header/>
             <Main/>
-            <Group/>
+            <Services/>
             <Skills/>
             <Projects/>
             <Contact/>

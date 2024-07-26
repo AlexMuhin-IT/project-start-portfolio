@@ -8,13 +8,13 @@ import {theme} from '../../../styles/Theme';
 
 export const Main = () => {
     return (
-        <StyledMain id={'Home'}>
+        <StyledMain id="Home">
             <Container>
                 <FlexWrapper align={'center'} justify={'space-between'}>
                     <TextWrap>
-                        <SmallText>Hi There 👋,</SmallText>
+                        <SmallText>Hi 👋,</SmallText>
                         <Name>My name is <span>Alex Muhin</span></Name>
-                        <MainTitle>A Web Developer.</MainTitle>
+                        <MainTitle>A Web Developer</MainTitle>
                     </TextWrap>
                     <Photo src={photo} alt=""/>
                 </FlexWrapper>
@@ -29,24 +29,11 @@ const StyledMain = styled.section`
 `
 const TextWrap = styled.article`
   font-weight: 700;
-  font-size: 58px;
-  line-height: 1.2;
   margin-right: 100px;
 `
 const SmallText = styled.span`
-
+  font-size: calc( (100vw - 480px)/(1200 - 480) * (58 - 16) + 16px);
 `
-
-const Photo = styled.img`
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border: 3px solid transparent;
-  border-radius: 230px;
-  background: ${theme.colors.gradient};
-  
-`
-
 const Name = styled.h2`
 
   span {
@@ -58,3 +45,13 @@ const Name = styled.h2`
 const MainTitle = styled.h1`
 
 `
+const Photo = styled.img`
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border: 3px solid transparent;
+  border-radius: 230px;
+  background: ${theme.colors.gradient};
+  
+`
+
