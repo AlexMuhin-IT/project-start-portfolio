@@ -53,5 +53,6 @@ const ContactLink = styled.a`
   box-sizing: content-box;
   color: transparent;
   background-image: ${theme.colors.gradient};
-  background-clip: text;
+  -webkit-background-clip: text;
+  
 `

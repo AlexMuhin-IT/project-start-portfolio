@@ -16,10 +16,10 @@ export function Services() {
                 <StyledServiceBg>
 
 
-                <SectionTitle>Services</SectionTitle>
-                <ServiceSubTitle>From beginning ideas to individual
-                    integrity,<span> line on the paper to final projects</span>
-                </ServiceSubTitle>
+                    <SectionTitle>Services</SectionTitle>
+                    <ServiceSubTitle>From beginning ideas to individual
+                        integrity,<span> line on the paper to final projects</span>
+                    </ServiceSubTitle>
 
                     <FlexWrapper justify={'space-between'}>
                         <ServiceImg src={imgGroup} alt=""/>
@@ -49,6 +49,7 @@ export function Services() {
         </StyledMService>
     );
 }
+
 const StyledMService = styled.section`
 `
 
@@ -73,7 +74,7 @@ const StyledServiceBg = styled.div`
 const ServiceSubTitle = styled(SectionSubtitle)`
 
   span {
-    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     background-image: ${theme.colors.gradient};
   }
