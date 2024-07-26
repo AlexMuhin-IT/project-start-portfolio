@@ -64,6 +64,7 @@ const StyledServiceBg = styled.div`
     content: '';
     background-image: url(${groupBg});
     background-repeat: no-repeat;
+    background-position: center;
     top: -133px;
     right: -372px;
   }
@@ -72,7 +73,7 @@ const StyledServiceBg = styled.div`
 const ServiceSubTitle = styled(SectionSubtitle)`
 
   span {
-    background-clip: text;
+    background-clip: content-box;
     color: transparent;
     background-image: ${theme.colors.gradient};
   }
@@ -81,5 +82,8 @@ const ServiceSubTitle = styled(SectionSubtitle)`
 const ServiceImg = styled.img`
   max-width: 453px;
   max-height: 643px;
+  width: 453px;
+  height: 643px;
+  object-fit: cover;
 `
 
