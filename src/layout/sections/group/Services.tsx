@@ -73,7 +73,7 @@ const StyledServiceBg = styled.div`
 const ServiceSubTitle = styled(SectionSubtitle)`
 
   span {
-    background-clip: content-box;
+    background-clip: text;
     color: transparent;
     background-image: ${theme.colors.gradient};
   }

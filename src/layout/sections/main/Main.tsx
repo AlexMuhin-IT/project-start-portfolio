@@ -37,6 +37,7 @@ const SmallText = styled.span`
 const Name = styled.h2`
 
   span {
+    
     background-clip: text;
     color: transparent;
     background-image: ${theme.colors.gradient};
