@@ -2,6 +2,7 @@
 import React from 'react';
 import { Icon } from './Icon';
 import styled from 'styled-components';
+import {theme} from "../../styles/Theme";
 
 type IconNavPropsType = {
   iconId?: string
@@ -17,18 +18,18 @@ export const IconNav = (props: IconNavPropsType) => {
       <ul>
         <li>
           <a href="#">
-            <Icon iconId={'gitNav'} width={props.width || "30"} height={props.height || "30"} viewBox={props.height || "0 0 121 121"} />
+            <Icon iconId={'gitNav'} width={props.width || "31"} height={props.height || "31"} viewBox={props.height || "0 0 121 121"} />
           </a>
         </li>
         <li>
           <a href="#">
-            <Icon iconId={'twitterNav'} width={props.width || "30"} height={props.height || "30"} viewBox={props.height || "0 0 121 121"} /> {/*30 не работает 31 работает*/}
+            <Icon iconId={'twitterNav'} width={props.width || "31"} height={props.height || "31"} viewBox={props.height || "0 0 121 121"} /> {/*30 не работает 31 работает*/}
           </a>
 
         </li>
         <li>
           <a href="#">
-            <Icon iconId={'linkedinNav'} width={props.width || "30"} height={props.height || "30"} viewBox={props.height || "0 0 121 121"} />
+            <Icon iconId={'linkedinNav'} width={props.width || "31"} height={props.height || "31"} viewBox={props.height || "0 0 121 121"} />
           </a>
         </li>
       </ul>
@@ -37,6 +38,13 @@ export const IconNav = (props: IconNavPropsType) => {
 };
 
 const SocialNav = styled.div`
-  display: flex;
-  gap: 20px;
+  
+  ul{
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media ${theme.media.mobile}{
+    display: none;
+  }
 `

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SectionTitle} from '../../../components/SectionTitle';
-import {Button} from '../../../components/Button';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/Theme";
 
@@ -22,15 +20,15 @@ export const Contact = () => {
 const StyledContacts = styled.section`
 `
 
-const StyledForm = styled.form`
-  max-width: 500px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0 auto;
-  padding-bottom: 200px;
-`
+// const StyledForm = styled.form`
+//   max-width: 500px;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+//   margin: 0 auto;
+//   padding-bottom: 200px;
+// `
 const ContactTitle = styled.h2`
   font-family: "DM Sans", sans-serif;
   font-weight: 700;

@@ -14,13 +14,10 @@ export function Services() {
         <StyledMService id={'Services'}>
             <Container>
                 <StyledServiceBg>
-
-
                     <SectionTitle>Services</SectionTitle>
                     <ServiceSubTitle>From beginning ideas to individual
                         integrity,<span> line on the paper to final projects</span>
                     </ServiceSubTitle>
-
                     <FlexWrapper justify={'space-between'}>
                         <ServiceImg src={imgGroup} alt=""/>
                         <FlexWrapper justify={'space-evenly'} align={'end'} wrap={'wrap'}>
@@ -68,8 +65,11 @@ const StyledServiceBg = styled.div`
     background-position: center;
     top: -133px;
     right: -372px;
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
   }
-
 `
 const ServiceSubTitle = styled(SectionSubtitle)`
 
@@ -78,6 +78,7 @@ const ServiceSubTitle = styled(SectionSubtitle)`
     color: transparent;
     background-image: ${theme.colors.gradient};
   }
+
 `
 
 const ServiceImg = styled.img`
@@ -86,5 +87,24 @@ const ServiceImg = styled.img`
   width: 453px;
   height: 643px;
   object-fit: cover;
+
+  @media ${theme.media.tablet} {
+    background-image: url(${imgGroup});
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+  }
+
 `
+
+//   width: 50%;
+//   height: 50%;
+//
+// }
+//
+// @media ${theme.media.mobile} {
+//   width: 30%;
+//   height: 30%;
+// }
 

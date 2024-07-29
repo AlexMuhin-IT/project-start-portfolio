@@ -1,6 +1,7 @@
 import React from 'react';
 import { Icon } from '../../../../components/icon/Icon';
 import styled from 'styled-components';
+import {theme} from "../../../../styles/Theme";
 
 
 type SkillPropsType = {
@@ -25,6 +26,10 @@ const StyledSkill = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 50px;
+  
+  @media ${theme.media.tablet}{
+    margin-bottom: 30px;
+  }
 
   //border: 1px solid #caa916; //бордер для редактирования
 `

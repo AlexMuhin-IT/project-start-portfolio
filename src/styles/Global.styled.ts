@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./Theme";
+import {font} from "./Common";
 
 export const GlobalStyle = createGlobalStyle`
 *,
@@ -36,13 +37,23 @@ button {
 
 section {
   padding-bottom: 200px;
+  
+  @media ${theme.media.tablet}{
+    padding-bottom: 150px;
+  }
+  
+  @media ${theme.media.mobile}{
+    padding-bottom: 60px;
+  }
 }
 
-h1{
-  font-size: calc( (100vw - 480px)/(1580 - 480) * (58 - 16) + 16px);
-}
-h2{
-  font-size: calc( (100vw - 480px)/(1580 - 480) * (48 - 16) + 16px);
-}
+// h1{
+//   // ${font({weight: 700, Fmax: 58, Fmin: 20, })}
+//   //font-size: calc( (100vw - 480px)/(1580 - 360) * (58 - 36) + 16px);
+// }
+// h2{
+//   //font-size: calc( (100vw - 480px)/(1580 - 360) * (48 - 26) + 16px);
+//   ${font({family: "'Poppins','sans-serif'", weight: 700, Fmax: 48, Fmin: 26, })}
+// }
 
 `

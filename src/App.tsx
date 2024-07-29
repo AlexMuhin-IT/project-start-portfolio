@@ -5,7 +5,7 @@ import {Contact} from './layout/sections/contacts/Contacts';
 import {Main} from './layout/sections/main/Main';
 import {Projects} from './layout/sections/projects/Projects';
 import {Skills} from './layout/sections/skills/skill/Skills';
-import {Services} from "./layout/sections/group/Services";
+import {Services} from "./layout/sections/services/Services";
 
 function App() {
     return (
@@ -15,11 +15,14 @@ function App() {
             <Services/>
             <Skills/>
             <Projects/>
-            <Contact/>
-            <Footer/>
+            {/*<Contact/>*/}
+            {/*<Footer/>*/}
         </div>
     );
 }
+/*
+ вопросы:
 
+*/
 
 export default App;
