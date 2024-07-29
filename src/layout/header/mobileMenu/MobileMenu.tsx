@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import styled from 'styled-components';
-import {IconNav} from '../icon/IconNav';
-import {theme} from '../../styles/Theme';
+import {IconNav} from '../../../components/icon/IconNav';
+import {theme} from '../../../styles/Theme';
 
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const MenuMobile = (props: { menuItems: Array<string> }) => {
     return (
         <div>
             <StyledMenu>
@@ -13,7 +13,7 @@ export const Menu = (props: { menuItems: Array<string> }) => {
                     {props.menuItems.map((item: string, index: number) => {
                         return (
                             <ListItem  key={index}>
-                                <Link href='#'>{item}</Link>
+                                <Link href='src/layout/header/menuMobile/MenuMobile#'>{item}</Link>
                             </ListItem>
                         )
                     })}
@@ -31,8 +31,10 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
+  
+  @media ${theme.media.tablet}{
+  display: none;
   }
-;
 `
 const ListItem = styled.li`
   justify-content: space-between;
@@ -44,6 +46,7 @@ const Link = styled.a`
   font-weight: 500;
   line-height: 1.3;
   color: ${theme.colors.secondaryBg}
+  
 `
 
 
