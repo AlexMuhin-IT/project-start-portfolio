@@ -72,7 +72,7 @@ const StyledServiceBg = styled.div`
   }
 `
 const ServiceSubTitle = styled(SectionSubtitle)`
-
+position: relative;
   span {
     -webkit-background-clip: text;
     color: transparent;
@@ -89,9 +89,10 @@ const ServiceImg = styled.img`
   object-fit: cover;
 
   @media ${theme.media.tablet} {
-    background-image: url(${imgGroup});
-    z-index: -1;
     position: absolute;
+    background-image: url(${imgGroup});
+    z-index: -9999;
+    left: 0;
     top: 0;
     opacity: 0.5;
   }

@@ -36,12 +36,15 @@ export const Project = (props: ProjectPropsType) => {
 const StyledProject = styled.div`
   max-width: 375px;
   width: 100%;
-  //max-height: 570px;
   margin-bottom: 30px;
   //border: 1px solid red; // рамки удалить
   border-radius: 20px;
   box-shadow: 0px 30px 20px  rgba(0, 0, 0, 0.2);
 
+  @media ${theme.media.mobile}{
+    width: 275px;
+    
+  }
 `
 const Image = styled.img`
   background-image: url(${props => props.src});
@@ -50,6 +53,12 @@ const Image = styled.img`
   width: 375px;
   height: 260px;
   object-fit: cover;
+  
+  
+  @media ${theme.media.mobile}{
+    width: 275px;
+    height: 160px;
+  }
 `
 const TextWrap = styled.div`
   margin: 25px 30px;
