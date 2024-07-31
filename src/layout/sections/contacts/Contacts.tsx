@@ -2,17 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
+import {Container} from "../../../components/Container";
 
 export const Contact = () => {
     return (
         <StyledContacts>
-            <FlexWrapper direction={'column'} align={'center'}>
-                <ContactTitle>For any questions please mail me:</ContactTitle>
-                <ContactButton as='a'>
-                    <ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</ContactLink>
-                </ContactButton>
-
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <ContactTitle>For any questions please mail me:</ContactTitle>
+                    <ContactButton as='a'>
+                        <ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</ContactLink>
+                    </ContactButton>
+                </FlexWrapper>
+            </Container>
         </StyledContacts>
     );
 };
@@ -30,10 +33,12 @@ const StyledContacts = styled.section`
 //   padding-bottom: 200px;
 // `
 const ContactTitle = styled.h2`
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 58px;
   color: #1E0E62;
+  ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38})}
+  
+  @media ${theme.media.mobile}{
+    text-align: center;
+  }
 `
 
 const ContactButton = styled.button`
@@ -44,13 +49,9 @@ const ContactButton = styled.button`
 `
 const ContactLink = styled.a`
   margin-top: 10px;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 58px;
-
   box-sizing: content-box;
   color: transparent;
   background-image: ${theme.colors.gradient};
   -webkit-background-clip: text;
-  
+  ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38, color: `${theme.colors.gradient}`})}
 `

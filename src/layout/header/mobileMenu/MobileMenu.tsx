@@ -68,7 +68,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 200px;
   height: 200px;
   z-index: 99999999;
-
   span {
     display: block;
     width: 36px;
@@ -91,8 +90,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(-10px);
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(-45deg) translateY(0);
-      `}
+        transform: rotate(-45deg)translateY(0);
+    `}
     }
 
     &::after {
@@ -105,16 +104,16 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(45deg) translateY(0);
+        transform: rotate(45deg)translateY(0);
         width: 36px;
-      `}
+    `}
     }
   }
-}
-
-@media ${theme.media.mobile} {
+ 
+ }
+@media ${theme.media.mobile}{
   top: -98px;
-  right: -65px;
+  right: 80px;
 `
 const ListItem = styled.li`
   justify-content: space-between;

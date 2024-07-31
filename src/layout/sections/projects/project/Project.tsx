@@ -5,6 +5,7 @@ import {IconNav} from '../../../../components/icon/IconNav';
 import {Icon} from '../../../../components/icon/Icon';
 import iconSrc1 from '../../../../assets/images/link-chain.svg'
 import iconSrc2 from '../../../../assets/images/link-github.svg'
+import {font} from "../../../../styles/Common";
 
 
 type ProjectPropsType = {
@@ -39,7 +40,7 @@ const StyledProject = styled.div`
   margin-bottom: 30px;
   //border: 1px solid red; // рамки удалить
   border-radius: 20px;
-  box-shadow: 0px 30px 20px  rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30px 20px  rgba(0, 0, 0, 0.2);
 
   @media ${theme.media.mobile}{
     width: 275px;
@@ -57,7 +58,7 @@ const Image = styled.img`
   
   @media ${theme.media.mobile}{
     width: 275px;
-    height: 160px;
+    height: auto;
   }
 `
 const TextWrap = styled.div`
@@ -66,20 +67,27 @@ const TextWrap = styled.div`
   flex-direction: column;
 `
 const Title = styled.h3`
-  font-size: 28px;
-  font-weight: 500;
+  ${font({Fmax: 28, Fmin: 20, weight: 700})}
   margin-bottom: 15px;
   color: #000;
+  
+  @media ${theme.media.mobile}{
+  }
 `
 const Text = styled.p`
-  font-size: 18px;
-  font-weight: 300;
+  ${font({Fmax: 18, Fmin: 14, weight: 300})}
   margin-bottom: 12px;
-  color: ${theme.colors.secondaryBg}
+  color: ${theme.colors.secondaryBg};
+
+  @media ${theme.media.mobile} {
+  }
 `
 const SubTitle = styled.p`
-  font-size: 16px;
   margin-bottom: 21px;
+  ${font({Fmax: 16, Fmin: 14, weight: 400})}
+  @media ${theme.media.mobile}{
+    
+  }
 `
 
 const LinkWrap = styled.div`
@@ -90,9 +98,16 @@ const LinkWrap = styled.div`
 const Link = styled.a<{ iconSrc: string }>`
   padding-left: 25px;
   background-image: url(${props => props.iconSrc});
-  font-size: 16px;
+  ${font({Fmax: 16, Fmin: 10, weight: 400})}
   text-decoration: underline;
   color: #000;
   background-size: 20px 20px;
   background-repeat: no-repeat;
+  
+
+  @media ${theme.media.mobile}{
+
+    line-height: 2.1;
+  }
+  
 `

@@ -37,10 +37,10 @@ export const Footer = () => {
                 </FooterTop>
                 <FooterBottom>
                     <FooterMenu menuItems={items}/>
-                    <p>Designed and built by <span>Pavan MG</span> with <span>Love</span> & <span>Coffee</span></p>
+                    <p>Designed by <span>Muhin A</span> with <span>Love</span> in <span>Coffee</span></p>
+                    {/*Designed  by Muhin A with Love in Coffee*/}
                 </FooterBottom>
             </Container>
-
         </StyledFooter>
     );
 };
@@ -79,13 +79,23 @@ const FooterTop = styled.div`
   position: relative;
   border-bottom: 2px solid #666666;
   padding-bottom: 55px;
+
   a {
     flex-grow: 3;
-    
+
     & + a {
       flex-grow: 1;
     }
   }
+
+  @media ${theme.media.mobile} {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+
 `
 const FooterBottom = styled.div`
   margin-top: 50px;
@@ -93,10 +103,22 @@ const FooterBottom = styled.div`
   justify-content: space-between;
 
   span {
-    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     background-image: ${theme.colors.gradient};
   }
+
+  @media ${theme.media.mobile} {
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 20px;
+      line-height: 0.9;
+    }
+  }
+
+}
 `
 
 

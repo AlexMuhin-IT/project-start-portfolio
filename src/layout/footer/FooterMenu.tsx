@@ -23,10 +23,20 @@ const StyledMenu = styled.nav`
   display: flex;
   gap: 50px;
 
-
+  @media ${theme.media.mobile}{
+    gap: 20px;
+  }
+  
   ul {
     display: flex;
     gap: 50px;
+
+    @media ${theme.media.mobile}{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    }
   }
 ;
 `
@@ -40,4 +50,8 @@ const Link = styled.a`
   font-weight: 500;
   line-height: 1.3;
   color: ${theme.colors.secondaryBg}
+  
+  @media ${theme.media.mobile}{
+    font-size: 10px;
+  }
 `

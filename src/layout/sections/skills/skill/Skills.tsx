@@ -81,3 +81,9 @@ export const SectionSubtitle = styled.p`
     padding-bottom: 20px;
   }
 `
+
+/*
+сделать гридами скилс и проджект
+
+
+*/

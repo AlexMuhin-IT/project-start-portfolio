@@ -15,14 +15,15 @@ function App() {
             <Services/>
             <Skills/>
             <Projects/>
-            {/*<Contact/>*/}
-            {/*<Footer/>*/}
+            <Contact/>
+            <Footer/>
         </div>
     );
 }
 /*
  вопросы:
-
+ Header на мобилке?!
+немогу достучатся в Project  Text = styled.p
 */
 
 export default App;
