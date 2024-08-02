@@ -29,6 +29,7 @@ const StyledSkill = styled.div`
   
   @media ${theme.media.tablet}{
     margin-bottom: 30px;
+    max-width: 100%;
   }
 
   //border: 1px solid #caa916; //бордер для редактирования

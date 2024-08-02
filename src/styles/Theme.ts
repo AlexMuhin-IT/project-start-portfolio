@@ -8,7 +8,8 @@ export const theme = {
 
 
   media: {
+    tabletMax: 'screen and (max-width: 815px)',
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
-  }
+  },
 };

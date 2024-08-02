@@ -34,16 +34,14 @@ const StyledContacts = styled.section`
 // `
 const ContactTitle = styled.h2`
   color: #1E0E62;
-  ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38})}
-  
-  @media ${theme.media.mobile}{
+  ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38})} @media ${theme.media.mobile} {
     text-align: center;
   }
 `
 
 const ContactButton = styled.button`
   margin-top: 10px;
-  width: 715px;
+  max-width: 715px;
   height: 76px;
   text-align: center;
 `
