@@ -20,6 +20,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.primaryBg};
   line-height: 1.2;
+  
+  min-width: 360px;
 }
 
 a {

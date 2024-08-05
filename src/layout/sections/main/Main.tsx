@@ -53,7 +53,7 @@ const Photo = styled.img`
   width: 350px;
   height: 350px;
   object-fit: cover;
-  border: 3px solid transparent;
+  border: 9px solid transparent;
   border-radius: 230px;
   background: ${theme.colors.gradient};
   
