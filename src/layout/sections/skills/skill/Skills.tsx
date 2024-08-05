@@ -13,8 +13,6 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <GridWrapper>
-
-
                     <SectionTitle>My Tech Stack</SectionTitle>
                     <SectionSubtitle> Technologies I’ve been working with recently</SectionSubtitle>
                     {/*<FlexWrapper wrap={'wrap'} justify='space-evenly'>*/}
