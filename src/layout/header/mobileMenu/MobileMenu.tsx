@@ -113,7 +113,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
  }
 @media ${theme.media.mobile}{
   top: -98px;
-  right: 80px;
+  right: -98px;
 `
 const ListItem = styled.li`
   justify-content: space-between;

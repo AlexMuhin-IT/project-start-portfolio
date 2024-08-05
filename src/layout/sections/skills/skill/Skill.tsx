@@ -21,7 +21,8 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 190px;
+  max-width: 190px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

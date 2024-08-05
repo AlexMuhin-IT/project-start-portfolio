@@ -10,13 +10,13 @@ import {Services} from "./layout/sections/services/Services";
 function App() {
     return (
         <div className="App">
-            {/*<Header/>*/}
-            {/*<Main/>*/}
-            {/*<Services/>*/}
-            {/*<Skills/>*/}
+            <Header/>
+            <Main/>
+            <Services/>
+            <Skills/>
             <Projects/>
-            {/*<Contact/>*/}
-            {/*<Footer/>*/}
+            <Contact/>
+            <Footer/>
         </div>
     );
 }

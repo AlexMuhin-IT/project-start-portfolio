@@ -106,9 +106,11 @@ const FooterBottom = styled.div`
     -webkit-background-clip: text;
     color: transparent;
     background-image: ${theme.colors.gradient};
-  }
+  };
 
   @media ${theme.media.mobile} {
+    justify-content: space-around;
+    
     p {
       display: flex;
       flex-direction: column;
