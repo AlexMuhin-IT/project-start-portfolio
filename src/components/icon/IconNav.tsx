@@ -44,7 +44,7 @@ const SocialNav = styled.div`
     gap: 20px;
   }
   
-  @media ${theme.media.mobile}{
+  @media ${theme.media.tablet}{
     display: none;
   }
 `

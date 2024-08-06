@@ -38,7 +38,7 @@ button {
 }
 
 section {
-  padding-bottom: 200px;
+  padding: 100px 0;
   
   @media ${theme.media.tablet}{
     padding-bottom: 150px;
