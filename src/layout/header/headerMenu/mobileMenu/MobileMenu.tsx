@@ -1,32 +1,22 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import styled, {css} from 'styled-components';
-import {IconNav} from '../../../components/icon/IconNav';
-import {theme} from '../../../styles/Theme';
+import {IconNav} from '../../../../components/icon/IconNav';
+import {theme} from '../../../../styles/Theme';
+import {Menu} from "../menu/Menu";
 
 
-export const MobileMenu = (props: { menuItems: Array<string> }) => {
+export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
     return (
-        <div>
-            <StyledMobileMenu>
-                <BurgerButton isOpen={false}>
-                    <span></span>
-                </BurgerButton>
-                <MobileMenuPopup isOpen={false}>
-                    <ul>
-                        {props.menuItems.map((item: string, index: number) => {
-                            return (
-                                <ListItem key={index}>
-                                    <Link href='src/layout/header/mobileMenu/MobileMenu#'>{item}</Link>
-                                </ListItem>
-                            )
-                        })}
-                    </ul>
-                </MobileMenuPopup>
+        <StyledMobileMenu>
+            <BurgerButton isOpen={false}>
+                <span></span>
+            </BurgerButton>
+            <MobileMenuPopup isOpen={false}>
+                <Menu menuItems={props.menuItems}/>
+            </MobileMenuPopup>
 
-                <IconNav/>
-            </StyledMobileMenu>
-        </div>
+            <IconNav/>
+        </StyledMobileMenu>
     );
 };
 
@@ -68,6 +58,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 200px;
   height: 200px;
   z-index: 99999999;
+
   span {
     display: block;
     width: 36px;
@@ -90,8 +81,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(-10px);
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(-45deg)translateY(0);
-    `}
+        transform: rotate(-45deg) translateY(0);
+      `}
     }
 
     &::after {
@@ -104,28 +95,18 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       transform: translateY(10px);
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
-        transform: rotate(45deg)translateY(0);
+        transform: rotate(45deg) translateY(0);
         width: 36px;
-    `}
+      `}
     }
   }
- 
- }
-@media ${theme.media.mobile}{
+
+}
+
+@media ${theme.media.mobile} {
   top: -98px;
   right: -98px;
 `
-const ListItem = styled.li`
-  justify-content: space-between;
-  list-style-type: none;
-`
 
-const Link = styled.a`
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.3;
-  color: ${theme.colors.secondaryBg}
-
-`
 
 

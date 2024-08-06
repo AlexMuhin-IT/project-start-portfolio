@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-const StyledHeader = styled.header`
+const Header = styled.header`
   padding: 40px;
   position: sticky;
   top: 0;
@@ -15,5 +15,5 @@ const StyledHeader = styled.header`
 `
 
 export const S = {
-    Header,
+    Header
 }
