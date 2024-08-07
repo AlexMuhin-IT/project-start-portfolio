@@ -5,7 +5,7 @@ import { S } from './Contacts_Styles';
 
 export const Contact: React.FC = () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={"contact"}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <S.ContactTitle>For any questions please mail me:</S.ContactTitle>
