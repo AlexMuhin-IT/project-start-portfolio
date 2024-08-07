@@ -1,28 +1,13 @@
 import React from 'react'
-import styled from 'styled-components';
 import {IconNav} from '../../../../components/icon/IconNav';
-import {theme} from '../../../../styles/Theme';
 import {Menu} from "../menu/Menu";
-
+import {S} from "./../HeaderMenu_Styles"
 
 export const DesktopMenu = (props: { menuItems: Array<string> }) => {
     return (
-        <StyledDesktopMenu>
+        <S.DesktopMenu>
             <Menu menuItems={props.menuItems}/>
             <IconNav/>
-        </StyledDesktopMenu>
+        </S.DesktopMenu>
     );
 };
-
-const StyledDesktopMenu = styled.nav`
-  display: flex;
-  gap: 50px;
-
-  ul {
-    display: flex;
-    gap: 30px;
-  }
-
-  @media ${theme.media.tablet} {
-    display: none;
-`

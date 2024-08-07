@@ -1,121 +1,90 @@
 import React from 'react';
-import styled from 'styled-components';
 import {SectionTitle} from '../../../../components/SectionTitle';
-import {FlexWrapper} from '../../../../components/FlexWrapper';
 import {Skill} from './Skill';
 import {Container} from '../../../../components/Container';
-import {theme} from "../../../../styles/Theme";
-import {font} from "../../../../styles/Common";
 import {GridWrapper} from "../../../../components/GridWrapper";
+import {S} from "./Skills_Styles"
 
-export const Skills = () => {
+const skillData = [
+    {
+        title: 'HTML5',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'htmlStack',
+    },
+    {
+        title: 'CSS3',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'cssStack',
+    },
+    {
+        title: 'JS',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'jsStack',
+    },
+    {
+        title: 'React',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'reactStack',
+    },
+    {
+        title: 'Vector',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'vectorStack',
+    },
+    {
+        title: 'Boot Strap',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'bootStrapStack',
+    },
+    {
+        title: 'SASS',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'sassStack',
+    },
+    {
+        title: 'Git Branch',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'gitStack',
+    },
+    {
+        title: 'Tailwind',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'tailwindStack',
+    },
+    {
+        title: 'Greensock',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'greensockStack',
+    },
+    {
+        title: 'VScode',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'vscodeStack',
+    },
+    {
+        title: 'Git fill',
+        description: 'Lorem ipsum dolor sit amet.',
+        iconId: 'gitIconStack',
+    },
+]
+
+export const Skills: React.FC = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
+                <SectionTitle>My Tech Stack</SectionTitle>
+                <S.SectionSubtitle> Technologies I’ve been working with recently</S.SectionSubtitle>
                 <GridWrapper>
-                    <SectionTitle>My Tech Stack</SectionTitle>
-                    <SectionSubtitle> Technologies I’ve been working with recently</SectionSubtitle>
-                    {/*<FlexWrapper wrap={'wrap'} justify='space-evenly'>*/}
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'HTML5'}
-                        iconId={'htmlStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'CSS3'}
-                        iconId={'cssStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'JS'}
-                        iconId={'jsStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'React'}
-                        iconId={'reactStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Vector'}
-                        iconId={'vectorStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Boot Strap'}
-                        iconId={'bootStrapStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'SASS'}
-                        iconId={'sassStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Git Branch'} iconId={'gitStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Tailwind'}
-                        iconId={'tailwindStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Greensock'}
-                        iconId={'greensockStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'VScode'}
-                        iconId={'vscodeStack'}/>
-                    <Skill
-                        description={'Lorem ipsum dolor sit amet.'}
-                        title={'Git fill'}
-                        iconId={'gitIconStack'}/>
-                    {/*</FlexWrapper>*/}
+                    {skillData.map((s, index)=>{
+                        return <Skill
+                            key={index}
+                            description={s.description}
+                            title={s.title}
+                            iconId={s.iconId}/>
+                    })}
                 </GridWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
-
-const StyledSkills = styled.section`
-  /* min-height: 50vh; */
-
-
-  @media ${theme.media.tablet} {
-
-    Skill {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-  }
-`
-
-export const SectionSubtitle = styled.p`
-  //display: block;
-  text-align: center;
-  padding-bottom: 125px;
-  ${font({weight: 700, Fmax: 32, Fmin: 26})}
-  padding-bottom: 50px;
-  grid-column-start: 1;
-  grid-column-end: 7;
-
-  @media ${theme.media.tabletMax} {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    padding-bottom: 20px;
-  };
-  
-  @media ${theme.media.tablet} {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    padding-bottom: 20px;
-  };
-  
-  @media ${theme.media.mobile} {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  };
-`
-
-
-
-/*
-сделать гридами скилс и проджект
-
-
-*/
