@@ -28,10 +28,10 @@ const items = [
 export const Menu: React.FC = () => {
     return (
         <ul>
-            {items.map((item: string, index: number) => {
+            {items.map((item, index) => {
                 return (
                     <S.MenuItem key={index}>
-                        <S.Link href={`${}`}>{item}</S.Link>
+                        <S.Link href={`#${item.href}`}>{item.title}</S.Link>
                     </S.MenuItem>
                 )
             })}

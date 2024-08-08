@@ -43,7 +43,7 @@ const servicesData = [
 
 export const Services: React.FC  = () => {
     return (
-        <S.Service id={'Services'}>
+        <S.Service id={'services'}>
             <Container>
                 <S.ServiceBg>
                     <SectionTitle>Services</SectionTitle>

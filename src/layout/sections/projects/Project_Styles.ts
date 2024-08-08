@@ -21,6 +21,27 @@ const Project = styled.div`
     
   }
 `
+
+const ProjectMenu = styled.ul`
+  
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px; 
+
+`
+const TabItem = styled.li`
+  justify-content: space-between;
+  list-style-type: none;
+`
+
+const TabLink = styled.a`
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: ${theme.colors.secondaryBg}
+`
+
 const Image = styled.img`
   background-image: url(${props => props.src});
   background-size: 375px 260px;
@@ -88,6 +109,9 @@ const Link = styled.a<{ iconSrc: string }>`
 export const S = {
     Projects,
     Project,
+    ProjectMenu,
+    TabItem,
+    TabLink,
     Image,
     TextWrap,
     Title,
@@ -95,4 +119,5 @@ export const S = {
     SubTitle,
     LinkWrap,
     Link,
+
 }
