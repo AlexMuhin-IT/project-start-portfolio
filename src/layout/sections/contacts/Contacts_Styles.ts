@@ -17,6 +17,7 @@ const ContactButton = styled.button`
   max-width: 715px;
   height: 76px;
   text-align: center;
+  position: relative;
 `
 const ContactLink = styled.p`
   margin-top: 10px;
@@ -25,15 +26,17 @@ const ContactLink = styled.p`
   background-image: ${theme.colors.gradient};
   -webkit-background-clip: text;
   ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38, color: `${theme.colors.gradient}`})}
+  position: relative;
 `
 const ContactLinkClick = styled.a`
-  position: absolute;
-  top: 19px;
-  left: -30px;
-  /* background-color: red; */
-  content: "";
-  height: 50px;
-  width: 400px;
+ position: absolute;
+ top: 19px;
+ left: -30px;
+ //background-color: red;
+ content: "";
+ height: 50px;
+ width: 400px;
+ z-index: 999;
 `
 
 export const S = {

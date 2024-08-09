@@ -31,6 +31,7 @@ export const Contact: React.FC = () => {
                                     strings: ['hi@pavanmg.in'],
                                     autoStart: true,
                                     loop: true,
+
                                 }}
                             />
                         </S.ContactLink>
