@@ -1,12 +1,11 @@
 import React from 'react'
 import imgSrcLogo from "../../assets/images/logo.svg";
-
 import styled, {css} from 'styled-components';
-
+import {animateScroll as scroll} from "react-scroll";
 
 export const Logo = () => {
     return (
-        <Link href='#'/>
+        <Link onClick={()=>{scroll.scrollToTop()}}/>
     );
 };
 

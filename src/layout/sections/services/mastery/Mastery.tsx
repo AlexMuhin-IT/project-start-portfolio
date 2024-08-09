@@ -1,5 +1,5 @@
 import React from "react";
-import { S } from "./Services_Styles";
+import { S } from "../Services_Styles";
 
 type MasteryPropsType = {
     title?: string

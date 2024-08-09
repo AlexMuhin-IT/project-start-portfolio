@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Project} from './project/Project';
@@ -12,13 +11,9 @@ import projectImg6 from './../../../../src/assets/images/projectImg6.webp'
 import {Container} from '../../../components/Container';
 import {S} from './Project_Styles';
 import {ProjectNav, ProjectStatusType} from "./ProjectNav";
+import {Roll} from "react-awesome-reveal";
 
-// const projectNavData = [
-//     "All",
-//     "Landing page",
-//     "React",
-//     "Spa",
-// ]
+
 const tabsItems: Array<{title: string, status: ProjectStatusType}> = [
     {
         title: "All",
@@ -107,6 +102,10 @@ export const Projects: React.FC = () => {
                 <SectionTitle>Projects</SectionTitle>
                     <ProjectNav tabsItems={tabsItems} changeFilterStatus={changeFilterStatus}/>
                 <FlexWrapper wrap={'wrap'} justify={'space-around'}>
+                    <Roll
+                        cascade={true}
+                        damping={0.2}
+                    >
                     {filteredWorks.map((p, index) => {
                         return <Project
                             key={index}
@@ -115,7 +114,7 @@ export const Projects: React.FC = () => {
                             subtitle={p.subtitle}
                             src={p.src}/>
                     })}
-
+                        </Roll>
                 </FlexWrapper>
             </Container>
         </S.Projects>

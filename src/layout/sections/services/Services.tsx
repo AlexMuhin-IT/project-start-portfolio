@@ -3,9 +3,9 @@ import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import imgGroup from "../../../assets/images/groupImg.webp";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Mastery} from "./Mastery";
+import {Mastery} from "./mastery/Mastery";
 import {S} from "./Services_Styles"
-
+import {Zoom} from "react-awesome-reveal";
 
 const servicesData = [
     {
@@ -41,7 +41,7 @@ const servicesData = [
 
 ]
 
-export const Services: React.FC  = () => {
+export const Services: React.FC = () => {
     return (
         <S.Service id={'services'}>
             <Container>
@@ -50,21 +50,26 @@ export const Services: React.FC  = () => {
                     <S.ServiceSubTitle>From beginning ideas to individual
                         integrity,<span> line on the paper to final projects</span>
                     </S.ServiceSubTitle>
+
                     <FlexWrapper justify={'space-between'}>
                         <S.ServiceImg src={imgGroup} alt=""/>
                         <FlexWrapper justify={'space-evenly'} align={'end'} wrap={'wrap'}>
-                            {servicesData.map((m, index)=>{
-                                return <Mastery title={m.title}
-                                                key={index}
-                                                subtitle={m.subtitle}
-                                                linkUrl={m.linkUrl}/>
-                            })}
+                            <Zoom>
+                                {servicesData.map((m, index) => {
+
+                                    return <Mastery title={m.title}
+                                                    key={index}
+                                                    subtitle={m.subtitle}
+                                                    linkUrl={m.linkUrl}/>
+                                })}
+                            </Zoom>
                         </FlexWrapper>
                     </FlexWrapper>
                 </S.ServiceBg>
             </Container>
         </S.Service>
-    );
+    )
+        ;
 }
 
 

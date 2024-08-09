@@ -1,9 +1,10 @@
 import React from 'react';
-import {SectionTitle} from '../../../../components/SectionTitle';
-import {Skill} from './Skill';
-import {Container} from '../../../../components/Container';
-import {GridWrapper} from "../../../../components/GridWrapper";
+import {SectionTitle} from '../../../components/SectionTitle';
+import {Skill} from './skill/Skill';
+import {Container} from '../../../components/Container';
+import {GridWrapper} from "../../../components/GridWrapper";
 import {S} from "./Skills_Styles"
+import {Fade, JackInTheBox} from "react-awesome-reveal";
 
 const skillData = [
     {
@@ -75,13 +76,18 @@ export const Skills: React.FC = () => {
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <S.SectionSubtitle> Technologies I’ve been working with recently</S.SectionSubtitle>
                 <GridWrapper>
-                    {skillData.map((s, index)=>{
-                        return <Skill
-                            key={index}
-                            description={s.description}
-                            title={s.title}
-                            iconId={s.iconId}/>
-                    })}
+                    <JackInTheBox
+                        cascade={true}
+                        damping={0.2}
+                    >
+                        {skillData.map((s, index) => {
+                            return <Skill
+                                key={index}
+                                description={s.description}
+                                title={s.title}
+                                iconId={s.iconId}/>
+                        })}
+                    </JackInTheBox>
                 </GridWrapper>
             </Container>
         </S.Skills>

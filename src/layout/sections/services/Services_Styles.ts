@@ -2,15 +2,17 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import groupBg from "../../../assets/images/drawing-bg.svg";
 import {theme} from "../../../styles/Theme";
-import {SectionSubtitle} from "../skills/skill/Skills_Styles";
+import {SectionSubtitle} from "../skills/Skills_Styles";
 import imgGroup from "../../../assets/images/groupImg.webp";
 import {font} from "../../../styles/Common";
 import linkArrow from "../../../assets/images/link-arrow-right.svg";
 
 const Service = styled.section`
-    ${FlexWrapper} {
-      min-height: 70vh;
+  position: relative;
 
+  ${FlexWrapper} {
+    min-height: 70vh;
+  }
 `
 
 const ServiceBg = styled.div`
@@ -28,14 +30,15 @@ const ServiceBg = styled.div`
     background-position: center;
     top: -133px;
     right: -372px;
-    
+
     @media ${theme.media.tablet} {
-        display: none;
+      display: none;
     }
   }
 `
 const ServiceSubTitle = styled(SectionSubtitle)`
-position: relative;
+  position: relative;
+
   span {
     -webkit-background-clip: text;
     color: transparent;
@@ -67,15 +70,18 @@ const MasteryCard = styled.div`
   flex-direction: column;
   max-width: 315px;
   margin-bottom: 70px;
+
   h3 {
     ${font({weight: 600, Fmax: 18, Fmin: 10,})}
     margin-bottom: 20px;
   }
+
   p {
     ${font({weight: 400, Fmax: 12, Fmin: 8,})}
     color: #6b7280;
     margin-bottom: 20px;
   }
+
   a {
     ${font({weight: 500, Fmax: 12, Fmin: 8,})}
     color: #3730a3;
@@ -92,6 +98,7 @@ const MasteryCard = styled.div`
       top: -3px;
     }
   }
+
   @media ${theme.media.tablet} {
     margin-bottom: 35px;
     max-width: 210px;

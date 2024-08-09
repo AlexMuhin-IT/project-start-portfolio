@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import {font} from "../../../../styles/Common";
-import {theme} from "../../../../styles/Theme";
+import {font} from "../../../styles/Common";
+import {theme} from "../../../styles/Theme";
 
 
 const Skills = styled.section`
+  position: relative;
 `
 
 export const SectionSubtitle = styled.p`
