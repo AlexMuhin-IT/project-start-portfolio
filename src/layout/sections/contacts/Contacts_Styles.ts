@@ -18,7 +18,7 @@ const ContactButton = styled.button`
   height: 76px;
   text-align: center;
 `
-const ContactLink = styled.a`
+const ContactLink = styled.p`
   margin-top: 10px;
   box-sizing: content-box;
   color: transparent;
@@ -26,10 +26,20 @@ const ContactLink = styled.a`
   -webkit-background-clip: text;
   ${font({family: 'DM sans', weight: 700, Fmax: 58, Fmin: 38, color: `${theme.colors.gradient}`})}
 `
+const ContactLinkClick = styled.a`
+  position: absolute;
+  top: 19px;
+  left: -30px;
+  /* background-color: red; */
+  content: "";
+  height: 50px;
+  width: 400px;
+`
 
 export const S = {
     Contacts,
     ContactTitle,
     ContactButton,
     ContactLink,
+    ContactLinkClick,
 }

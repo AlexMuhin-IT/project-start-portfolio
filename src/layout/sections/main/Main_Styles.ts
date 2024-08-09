@@ -25,6 +25,9 @@ const Name = styled.h2`
 `
 const MainTitle = styled.h1`
   ${font({weight: 700, Fmax: 58, Fmin: 20,})}
+  p{
+    display: none;
+  }
 `
 const ImgWrap = styled.div`
   max-width: 350px;
