@@ -9,7 +9,6 @@ export const Contact: React.FC = () => {
         <S.Contacts id={"contact"}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
-                    {/*<S.ContactTitle>For any questions please mail me:</S.ContactTitle>*/}
                     <S.ContactTitle>
                         <Typewriter
                             options={{
@@ -22,10 +21,7 @@ export const Contact: React.FC = () => {
 
                     <S.ContactButton as='a'>
                         <S.ContactLinkClick href="mailto:hi@pavanmg.in"></S.ContactLinkClick>
-                        {/*<S.ContactLink href="mailto:hi@pavanmg.in">hi@pavanmg.in</S.ContactLink>*/}
                         <S.ContactLink >
-                            {/*href="mailto:hi@pavanmg.in">*/}
-                            {/*hi@pavanmg.in*/}
                             <Typewriter
                                 options={{
                                     strings: ['hi@pavanmg.in'],
@@ -35,7 +31,6 @@ export const Contact: React.FC = () => {
                                 }}
                             />
                         </S.ContactLink>
-
                     </S.ContactButton>
                 </FlexWrapper>
             </Container>

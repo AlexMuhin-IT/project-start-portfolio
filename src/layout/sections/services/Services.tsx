@@ -56,7 +56,6 @@ export const Services: React.FC = () => {
                         <FlexWrapper justify={'space-evenly'} align={'end'} wrap={'wrap'}>
                             <Zoom>
                                 {servicesData.map((m, index) => {
-
                                     return <Mastery title={m.title}
                                                     key={index}
                                                     subtitle={m.subtitle}

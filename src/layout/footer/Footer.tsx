@@ -12,9 +12,11 @@ const socialItemData = [
         iconId: 'gitNav',
     },
     {
-        iconId: 'twitterNav',},
+        iconId: 'twitterNav',
+    },
     {
-        iconId: 'linkedinNav',},
+        iconId: 'linkedinNav',
+    },
 ]
 
 export const Footer: React.FC = () => {
@@ -40,7 +42,6 @@ export const Footer: React.FC = () => {
                 <S.FooterBottom>
                     <FooterMenu menuItems={items}/>
                     <p>Designed by <span>Muhin A</span> with <span>Love</span> in <span>Coffee</span></p>
-                    {/*Designed  by Muhin A with Love in Coffee*/}
                 </S.FooterBottom>
             </Container>
         </S.Footer>

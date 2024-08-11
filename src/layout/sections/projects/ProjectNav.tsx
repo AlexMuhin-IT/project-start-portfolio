@@ -12,9 +12,7 @@ export const ProjectNav = (props: ProjectNavPropsType) => {
     return (
         <S.ProjectMenu>
             {props.tabsItems.map((item, index) => {
-                // debugger
                 return (
-
                     <S.TabItem key={index}>
                         <S.TabLink as={"button"} onClick={()=>{props.changeFilterStatus(item.status)}}>{item.title}</S.TabLink>
                     </S.TabItem>

@@ -99,7 +99,6 @@ const Link = styled.a<{ iconSrc: string }>`
 
 
   @media ${theme.media.mobile} {
-
     line-height: 2.1;
   }
 

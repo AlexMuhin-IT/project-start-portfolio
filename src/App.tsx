@@ -22,10 +22,5 @@ function App() {
         </div>
     );
 }
-/*
- вопросы:
- Header на мобилке?!
-немогу достучатся в Project  Text = styled.p
-*/
 
 export default App;

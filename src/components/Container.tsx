@@ -9,8 +9,6 @@ export const Container = styled.div`
   margin: 0 auto;
   
   
-  //border: 2px solid red; // бордер для редактирования
-  
   @media ${theme.media.mobile}{
     padding: 0 5px;
     

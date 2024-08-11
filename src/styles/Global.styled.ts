@@ -50,14 +50,5 @@ export const GlobalStyle = createGlobalStyle`
       padding-bottom: 60px;
     }
   }
-
-  // h1{
-  //   // ${font({weight: 700, Fmax: 58, Fmin: 20,})}
-  //   //font-size: calc( (100vw - 480px)/(1580 - 360) * (58 - 36) + 16px);
-  // }
-  // h2{
-  //   //font-size: calc( (100vw - 480px)/(1580 - 360) * (48 - 26) + 16px);
-  //   ${font({family: "'Poppins','sans-serif'", weight: 700, Fmax: 48, Fmin: 26,})}
-  // }
-
+  
 `

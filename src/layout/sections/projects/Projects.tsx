@@ -95,7 +95,6 @@ export const Projects: React.FC = () => {
     function changeFilterStatus(value: ProjectStatusType) {
         setCurrentFilterStatus(value)
     }
-    // debugger
     return (
         <S.Projects id={"projects"}>
             <Container>

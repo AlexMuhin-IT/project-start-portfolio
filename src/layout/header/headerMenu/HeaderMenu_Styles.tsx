@@ -103,9 +103,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   right: -98px;
 `
 
-
 // Desctop Menu
-
 
 const DesktopMenu = styled.nav`
   display: flex;
