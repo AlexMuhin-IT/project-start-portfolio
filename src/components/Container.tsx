@@ -8,6 +8,7 @@ export const Container = styled.div`
   padding: 0 15px;
   margin: 0 auto;
   
+  
   //border: 2px solid red; // бордер для редактирования
   
   @media ${theme.media.mobile}{

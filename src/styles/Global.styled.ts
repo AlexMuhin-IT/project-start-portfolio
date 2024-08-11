@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${theme.colors.primaryBg};
     line-height: 1.2;
     min-width: 360px;
-    background-color: rgba(95, 158, 160, 0.1);
+    
   }
 
   a {
@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   section {
+    background-color: white;
     padding: 100px 0;
 
     @media ${theme.media.tablet} {
